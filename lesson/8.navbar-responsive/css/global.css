@@ -1,0 +1,22 @@
+body{
+    line-height: 30px;
+}
+
+ul{
+    padding: 0;
+    list-style: none;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+.container{
+    max-width: 960px;
+    margin: 0px auto;
+}
+
+.d-block{
+    display: block !important;
+}

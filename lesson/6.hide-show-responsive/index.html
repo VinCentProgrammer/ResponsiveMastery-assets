@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ẩn và hiện thông tin trên responsive </title>
+</head>
+<body>
+    <style>
+        #wrapper{
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        .box{
+            padding: 20px 10px;
+            margin: 10px 0px;
+            text-align: center;
+        }
+        .box-important{
+            background-color: tomato;
+            color: #fff;
+        }
+        .box-unimportant{
+            background-color: antiquewhite;
+            display: none;
+        }
+
+        /*Small devices (landscape phones, 576px and up) */
+        @media(min-width: 576px){
+            
+        }
+        /*Medium devices (tablets, 768px and up) */
+        @media(min-width: 768px){
+            .box-unimportant{
+                display: block;
+            }
+        }
+        /*Large devices (desktops, 992px and up) */
+        @media(min-width: 992px){
+            
+        }
+        /*Extra large devices (large desktop, 1200px and up) */
+        @media(min-width: 1200px){
+            
+        }
+    </style>
+    <div id="wrapper">
+        <div class="box box-important">
+            Thông tin chính
+        </div>
+        <div class="box box-unimportant">
+            Thông tin phụ
+        </div>
+        <div class="box box-important">
+            Thông tin chính
+        </div>
+    </div>
+</body>
+</html>

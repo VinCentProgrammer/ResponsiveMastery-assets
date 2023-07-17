@@ -1,0 +1,262 @@
+/* =========== HEADER =========== */
+
+
+#header{
+    background-color: #2c2c32;
+    position: fixed !important;
+    width: 100%;
+    position: relative;
+}
+
+
+/* ---------- logo - brand----------*/
+
+
+#logo-brand{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 15px;
+}
+
+
+#logo-brand img{
+    max-width: 40px;
+    height: auto;
+}
+
+
+#logo-brand span{
+    display: inline-block;
+    padding: 0px 5px;
+}
+
+
+
+/* ---------- main menu ----------*/
+
+
+ul#main-menu{
+    padding-left: 0;
+    list-style: none;
+    margin-bottom: 0;
+    display: none;
+    position: relative;
+    width: 55%;
+}
+
+
+ul#main-menu li.menu-item{
+    display: inline-block;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+}
+
+ul#main-menu li.menu-item>a{
+    color: #dacfcf;
+    text-decoration: none;
+    display: block;
+    padding: 20px;
+}
+
+ul#main-menu li.menu-item:hover a{
+    color: #ffffff;
+    cursor: pointer;
+}
+
+ul#main-menu li.menu-item ul.sub-menu{
+    padding: 0;
+    list-style: none;
+    position: absolute;
+    max-width: 105px;
+    background-color: #2c2c32;
+    display: none;
+}
+
+ul#main-menu li.menu-item ul.sub-menu li a{
+    display: block;
+    color: #e1dada;
+    text-decoration: none;
+    padding: 10px 23px;
+    font-size: 14px;
+}
+
+ul#main-menu li.menu-item:hover ul.sub-menu{
+    display: block;
+}
+
+ul#main-menu ul.sub-menu li:hover a{
+    color: #ffffff !important;
+    transition: all 0.25s ease-in-out;
+}
+
+/* ---------- main menu responsive----------*/
+
+ul#main-menu-responsive{
+    padding-left: 0;
+    list-style: none;
+    margin-bottom: 0;
+    position: absolute;
+    top: 69px;
+    left: 0px;
+    background-color: #37373e;
+    font-size: 16px;
+    width: 100%;
+    display: none;
+}
+
+ul#main-menu-responsive li a{
+    display: block;
+    color: #c7bbbb;
+    text-decoration: none;
+    padding: 10px 20px;
+    
+}
+
+ul#main-menu-responsive li:hover a{
+    color: #ffffff;
+    transition: all 0.25s ease-in-out;
+}
+
+
+ul#main-menu-responsive div.menu-responsive-item{
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+
+ul#main-menu-responsive div.menu-responsive-item:hover .arrow-down{
+    display: block;
+}
+ul#main-menu-responsive div.menu-responsive-item li.menu-item{
+    flex-basis: 90%;
+}
+ul#main-menu-responsive div.menu-responsive-item .arrow-down{
+    flex-basis: 10%;
+    padding: 10px;
+    color: #afa0a0;
+    display: none;
+}
+ul#main-menu-responsive div.menu-responsive-item .arrow-down:hover i{
+    color: #ffffff;
+    cursor: pointer;
+}
+
+ul#main-menu-responsive div.menu-responsive-item li.menu-item ul.sub-menu-responsive{
+    padding: 0px 20px;
+    list-style: none;
+    display: none;
+}
+
+ul#main-menu-responsive div.menu-responsive-item li.menu-item ul.sub-menu-responsive li a{
+    font-size: 13px;
+    color: #9b9292;
+}
+ul#main-menu-responsive div.menu-responsive-item li.menu-item ul.sub-menu-responsive li:hover a{
+    color: #ffffff !important;
+}
+
+/* ---------- btn - download ----------*/
+
+#btn-download{
+    padding: 22px;
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #075390;
+    font-weight: 600;
+    transition: all 0.25s ease-in-out;
+    display: none;
+}
+
+#btn-download:hover{
+    background-color: #0b76ce;
+}
+
+
+#btn-download span{
+    box-sizing: border-box;
+    padding-left: 6px;
+    display: inline-block;
+}
+
+
+/* ---------- btn - download responsive----------*/
+
+#btn-download-responsive{
+    background-color: #085695;
+    width: 100%;
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 20px;
+    transition: all 0.25s ease-in-out;
+}
+#btn-download-responsive:hover{
+    background-color: #0d7bd5;
+}
+
+/* ---------- button bars toggle ----------*/
+
+#btn-toggle{
+    color: #ffffff;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 25px;
+    transition: all 0.25s ease-in-out;
+}
+#btn-toggle:hover{
+    background-color: #0b76ce;
+    border-radius: 5px;
+}
+
+
+/* =========== WP - CONTENT =========== */
+
+
+#wp-content{
+    padding: 90px 20px 30px 20px;
+    font-size: 16px;
+}
+
+
+
+/*Small devices (landscape phones, 576px and up) */
+@media(min-width: 576px){
+    
+
+    #wp-content{
+        font-size: 18px;
+    }
+}
+/*Medium devices (tablets, 768px and up) */
+@media(min-width: 768px){
+    
+    ul#main-menu-responsive{
+        font-size: 18px;
+    }
+    #wp-content{
+        font-size: 19px;
+    }
+}
+/*Large devices (desktops, 992px and up) */
+@media(min-width: 992px){
+    ul#main-menu-responsive{
+        display: none;
+    }
+
+    #btn-toggle{
+        display: none;
+    }
+
+    ul#main-menu, #btn-download{
+        display: block;
+    }
+
+    #wp-content{
+        font-size: 20px;
+    }
+}
+/*Extra large devices (large desktop, 1200px and up) */
+@media(min-width: 1200px){
+    
+}

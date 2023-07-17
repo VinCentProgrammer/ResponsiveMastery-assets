@@ -1,0 +1,165 @@
+
+/* ========== HEADER ========== */
+#header{
+    background-color: #2d2d3a;
+    padding: 10px;
+    width: 100%;
+    position: fixed;
+}
+
+#header .logo-btn-toggle{
+    display: flex;
+    justify-content: space-between;
+}
+
+#header .logo-btn-toggle .logo a{
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    padding: 5px;
+    font-size: 17px;
+    letter-spacing: 1px;
+}
+#header .logo-btn-toggle .logo img{
+    width: 40px;
+}
+
+#header .logo-btn-toggle .btn-toggle{
+    padding: 8px 12px;
+    display: block;
+    cursor: pointer;
+}
+#header .logo-btn-toggle .btn-toggle:hover{
+    background-color: #005ba4;
+    border-radius: 3px;
+}
+#header .logo-btn-toggle .btn-toggle a{
+    color: #fff;
+    font-size: 25px;
+}
+#header nav{
+    display: none;
+}
+#header nav>ul.wp-menu{
+    margin-bottom: 0;
+    padding: 10px;
+}
+#header nav>ul.wp-menu .menu-item{
+    padding: 8px 0px;
+    transition: all 0.5s;
+}
+#header nav>ul.wp-menu .menu-item:hover{
+    cursor: pointer;
+}
+#header nav>ul.wp-menu .menu-item:hover a{
+    color: #b7b1b1;
+}
+#header nav>ul.wp-menu .menu-item a{
+    text-decoration: none;
+    color: #fff;
+}  
+#header nav .btn-download{
+    background-color: #005ba4
+    ;
+    color: #fff;
+    padding: 10px;
+}
+#header nav .btn-download:hover{
+    cursor: pointer;
+}
+#header nav .btn-download a{
+    color: #fff;
+    text-decoration: none;
+    padding: 0px 5px;
+}
+
+
+/* ========== BODY ========== */
+
+#body{
+    padding: 20px;
+    padding-top: 100px;
+    top: 70px;
+    width: 100%;
+}
+#body h1, h2, p{
+    font-size: 16px;
+}
+
+
+/*Small devices (landscape phones, 576px and up) */
+@media(min-width: 576px){
+    #body h1, h2, p{
+        font-size: 18px;
+    }
+
+    #header .logo-btn-toggle .logo a{
+        font-size: 18px;
+        letter-spacing: 2px;
+        font-weight: 500;
+    }
+}
+/*Medium devices (tablets, 768px and up) */
+@media(min-width: 768px){
+    #header{
+        padding: 5px;
+    }
+    #header nav{
+        display: block;
+    }
+
+    #header .logo-btn-toggle{
+        float: left;
+    }
+    
+    #header .logo-btn-toggle .btn-toggle{
+        display: none;
+    }
+    #header .logo-btn-toggle .logo a{
+        padding: 10px 5px;
+    }
+    #header nav>ul.wp-menu{
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+    #header nav>ul.wp-menu .menu-item{
+        display: inline-block;
+        padding: 2px;
+        flex-basis: 15%;
+        text-align: center;
+    }
+    #header nav>ul.wp-menu .menu-item a{
+        color: #b7b1b1;
+    }  
+    #header nav>ul.wp-menu .menu-item a:hover{
+        color: #fff;
+    }  
+    #header nav{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #header nav .btn-download{
+        padding: 10px;
+        display: flex;
+        align-items: center;
+    }
+
+    #body h1, h2, p{
+        font-size: 20px;
+    }
+    
+}
+/*Large devices (desktops, 992px and up) */
+@media(min-width: 992px){
+    #header nav>ul.wp-menu .menu-item{
+        padding: 5px 0px;
+    }
+    #header .logo-btn-toggle .logo a{
+        padding: 15px 5px;
+    }
+    #body h1, h2, p{
+        font-size: 22px;
+    }
+}

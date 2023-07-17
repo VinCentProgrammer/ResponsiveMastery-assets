@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghi đè css trong Responsive</title>
+</head>
+<body>
+    <style>
+        p{
+            color: red;
+        }
+        p.highlight{
+            background-color: tomato;
+        }
+
+        @media (min-width: 576px){
+            p{
+                color: green;
+            }
+            p.highlight{
+                background-color: aqua;
+            }
+        }
+    </style>
+    <h1>Ghi đè css trong Responsive</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad dolores, in ex necessitatibus molestiae ratione explicabo qui sapiente repellendus ducimus?</p>
+    <p class="highlight">Sit aliquid, beatae minus optio cum, vero odit quo deleniti fuga, quidem iste suscipit maxime qui veritatis ut dicta repellat.</p>
+    <p>Molestiae debitis cum ipsa, placeat necessitatibus numquam impedit nemo provident est magni porro iste ipsum, doloribus reiciendis? Autem, aperiam ex.</p>
+    <p>Eveniet ipsum sunt earum ipsa aut aliquid fugit iste cupiditate laborum asperiores, quidem aperiam ex et quas placeat consequuntur quaerat!</p>
+    <p>Sed perferendis optio provident doloremque, suscipit laborum soluta, dolores eius quam delectus, quis deleniti. Quis corporis adipisci mollitia expedita et.</p>
+</body>
+</html>

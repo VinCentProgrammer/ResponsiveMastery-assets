@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập: Thay đổi layout website trên đa thiết bị</title>
+</head>
+<body>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #wrapper{
+            max-width: 960px;
+            margin: 0 auto;
+            box-sizing: border-box;
+        }
+
+        #header, #footer{
+            background-color: tomato;
+            color: #fff;
+            text-align: center;
+            padding: 20px 10px;
+            font-size: 30px;
+        }
+        #wp-content{
+            display: flex;
+            flex-wrap: nowrap;
+        }
+        #content, #sidebar{
+            line-height: 1.5;
+            padding: 10px;
+            /* flex-basis: 100%; */
+        }
+        #content{
+            background-color: #f5f5f5;
+            flex-basis: 70%;
+        }
+        #sidebar{
+            background-color: black;
+            color: #ffff;
+            flex-basis: 30%;
+        }
+        
+        p{
+            margin-bottom: 20px;
+        }
+
+        /* MOBILE FIRST */
+        /*Small devices (landscape phones, 576px and up) */
+        /* @media(min-width: 576px){
+            #wp-content{
+                display: flex;
+                flex-wrap: nowrap;
+            }
+            #content{
+                flex-basis: 70%;
+            }
+            #sidebar{
+                flex-basis: 30%;
+            }
+        } */
+
+        /* PC FIRST */
+        /* Extra small devices (portrait phone, let than 576px) */
+        @media(max-width: 576px){
+            #wp-content{
+                flex-wrap: wrap;
+            }
+            #content, #sidebar{
+                flex-basis: 100%;
+            }
+        }
+    </style>
+    <div id="wrapper">
+        <div id="header">
+            HEADER
+        </div>
+        <div id="wp-content">
+            <div id="content">
+                <h1>Content</h1>
+                <h2>1. Lorem ipsum dolor sit amet.</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit debitis rem dolorum sit ut! Nulla cumque exercitationem officia voluptates ab?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, voluptas delectus hic doloribus quae expedita perspiciatis sed nesciunt asperiores culpa vero velit, laboriosam eaque! Autem quasi exercitationem iste earum? Officia tempore in recusandae quod soluta maiores, nam voluptatum repudiandae molestiae.</p>
+                <h2>2. Lorem ipsum dolor sit amet.</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit debitis rem dtes ab?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, voluptas delectus hic doloribus quae expedita perspiciatis sed nesciunt asperiores culpa vero velit, laboriosam eaque! Autem quasi exercitationem iste earum? Officia tempore in recusandae quod soluta maiores, nam voluptatum repuolorum sit ut! Nulla cumque exercitationem officia voluptates ab?</p>
+                <h2>3. Lorem ipsum dolor sit amet.</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit debitis rem dotes ab?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, voluptas delectus hic doloribus quae expedita perspiciatis sed nesciunt asperiores culpa vero velit, laboriosam eaque! Autem quasi exercitationem iste earum? Officia tempore in recusandae quod soluta maiores, nam voluptatum repulorum sit ut! Nulla cumque exercitationem officia voluptates ab?</p>
+                <h2>4. Lorem ipsum dolor sit amet.</h2>
+                <p>Lorem ipsum dtes ab?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, voluptas delectus hic doloribus quae expedita perspiciatis sed nesciunt asperiores culpa vero velit, laboriosam eaque! Autem quasi exercitationem iste earum? Officia tempore in recusandae quod soluta maiores, nam voluptatum repuolor sit amet consectetur adipisicing elit. Suscipit debitis rem dolorum sit ut! Nulla cumque exercitationem officia voluptates ab?</p>
+            </div>
+            <div id="sidebar">
+                <h1>Sidebar</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos expedita laudantium ut tempora eligendi modi soluta in deleniti id. Ducimus officia iste commodi illum asperiores tempore dolorem! Repudiandae, sunt? Similique nobis et id architecto reprehenderit corrupti, sapiente harum magnam unde?</p>
+            </div>
+        </div>
+        <div id="footer">
+            FOOTER
+        </div>
+    </div>
+</body>
+</html>
